@@ -14,7 +14,7 @@
 
 ## Hierarchy Tree
 
-```
+```text
 ~/.claude/CLAUDE.md                          (global)
 └─ CLAUDE.md                                 (project root)
    ├─ backend-api/
@@ -194,7 +194,7 @@ No secrets, tokens, credentials, or PII detected.
 | `frontend-app` rules (×2) | 164 | 0 | 164 | DELETED |
 | **TOTAL** | **4,468** | **2,486** | **1,982** | **−44.4%** |
 
-```
+```text
 Before  ████████████████████  4,468 tokens
 After   ███████████░░░░░░░░░  2,486 tokens
 Saved   ░░░░░░░░░█████████░░  1,982 tokens (44.4%)
