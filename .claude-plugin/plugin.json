@@ -1,0 +1,14 @@
+{
+  "name": "please-optimize-my-claude-md",
+  "description": "Optimize your CLAUDE.md hierarchy — deduplicate, detect misplacement, compress bloat, and visualize token usage across global/project/repo levels",
+  "version": "1.0.0",
+  "skills": "./skills/",
+  "author": {
+    "name": "JJ Adonis",
+    "email": "work@josejai.me"
+  },
+  "homepage": "https://github.com/thedoublejay/please-optimize-my-claude-md",
+  "repository": "https://github.com/thedoublejay/please-optimize-my-claude-md",
+  "license": "MIT",
+  "keywords": ["claude-md", "optimization", "deduplication", "token-reduction", "hierarchy", "monorepo"]
+}
