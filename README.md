@@ -58,13 +58,7 @@ No tool analyzes the full hierarchy and helps you fix it. This skill does.
 
 ## Quick Start
 
-**Recommended:** Install via Claude Code native plugin:
-
-```bash
-/install thedoublejay/please-optimize-my-claude
-```
-
-**Also available** via skills.sh marketplace:
+Install via [skills.sh](https://skills.sh) marketplace:
 
 ```bash
 npx skills add thedoublejay/please-optimize-my-claude
@@ -197,6 +191,14 @@ api                 ███████ 3,800  → ████ 2,100  → -1,
 ─────────────────────────────────────────────────────────────
 TOTAL               14,820         → 10,520       → -4,300 (29%)
 ```
+
+---
+
+## Sample Report
+
+A complete example run against a synthetic 4-repo "Mavs Org" organization — showing the full analysis output, issue breakdown, and before/after token savings.
+
+→ [examples/sample-report.md](examples/sample-report.md)
 
 ---
 
