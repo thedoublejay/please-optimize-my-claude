@@ -76,8 +76,6 @@ Then run from any project directory:
 
 ```bash
 /please-optimize-my-claude
-# or use the short alias:
-/pomc
 ```
 
 ---
@@ -97,7 +95,6 @@ Then run from any project directory:
 ```bash
 # Just see what's wrong — no changes
 /please-optimize-my-claude analyze
-# or: /pomc analyze
 
 # Interactive: review findings and decide what to apply
 /please-optimize-my-claude
