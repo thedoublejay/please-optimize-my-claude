@@ -1,0 +1,55 @@
+name: Bug Report
+description: Something isn't working as expected
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Fill out the sections below to help us reproduce it.
+
+  - type: input
+    id: version
+    attributes:
+      label: Skill version / install method
+      description: "e.g. `npx skills add thedoublejay/please-optimize-my-claude` or `/install thedoublejay/please-optimize-my-claude`"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe what went wrong. Include the mode you used (interactive / auto / analyze).
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Run `/please-optimize-my-claude analyze`
+        2. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: hierarchy
+    attributes:
+      label: CLAUDE.md hierarchy (optional but helpful)
+      description: |
+        Paste your directory structure, e.g.:
+        ```
+        ~/.claude/CLAUDE.md (global)
+        ./CLAUDE.md (root)
+        ./api/CLAUDE.md
+        ```
+    validations:
+      required: false

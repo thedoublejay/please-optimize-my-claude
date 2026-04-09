@@ -1,0 +1,18 @@
+name: Publish Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.release.tag_name }}
+
+      - name: Verify release
+        run: |
+          echo "Release ${{ github.event.release.tag_name }} published successfully"
+          echo "Skill is now available via: npx skills add thedoublejay/please-optimize-my-claude"

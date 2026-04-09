@@ -1,0 +1,58 @@
+name-template: "v$RESOLVED_VERSION"
+tag-template: "v$RESOLVED_VERSION"
+
+version-resolver:
+  major:
+    labels:
+      - "breaking"
+  minor:
+    labels:
+      - "feature"
+      - "enhancement"
+  patch:
+    labels:
+      - "fix"
+      - "chore"
+      - "documentation"
+  default: patch
+
+autolabeler:
+  - label: "breaking"
+    title:
+      - "/^feat!|^fix!|BREAKING/i"
+  - label: "feature"
+    title:
+      - "/^feat/i"
+  - label: "fix"
+    title:
+      - "/^fix/i"
+  - label: "chore"
+    title:
+      - "/^chore/i"
+  - label: "documentation"
+    title:
+      - "/^docs/i"
+
+categories:
+  - title: "New Features"
+    labels:
+      - "feature"
+      - "enhancement"
+  - title: "Bug Fixes"
+    labels:
+      - "fix"
+  - title: "Documentation"
+    labels:
+      - "documentation"
+  - title: "Maintenance"
+    labels:
+      - "chore"
+
+change-template: "- $TITLE (@$AUTHOR) [#$NUMBER]($URL)"
+
+template: |
+  ## What's Changed
+
+  $CHANGES
+
+  **Full Changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION

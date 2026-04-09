@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lint Markdown
+        uses: DavidAnson/markdownlint-cli2-action@v19
+        with:
+          globs: "**/*.md"
+
+      - name: Validate SKILL.md frontmatter
+        run: |
+          SKILL_FILE="skills/please-optimize-my-claude/SKILL.md"
+          if [ ! -f "$SKILL_FILE" ]; then
+            echo "ERROR: SKILL.md not found at $SKILL_FILE"
+            exit 1
+          fi
+          # Check frontmatter exists (starts and ends with ---)
+          head -1 "$SKILL_FILE" | grep -q "^---$" || { echo "ERROR: SKILL.md missing frontmatter"; exit 1; }
+          # Check required fields
+          grep -q "^name:" "$SKILL_FILE" || { echo "ERROR: SKILL.md missing 'name' field"; exit 1; }
+          grep -q "^description:" "$SKILL_FILE" || { echo "ERROR: SKILL.md missing 'description' field"; exit 1; }
+          echo "SKILL.md frontmatter valid"
