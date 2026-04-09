@@ -20,7 +20,6 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Migration mode for splitting a monolithic CLAUDE.md into a proper hierarchy
 - Auto-generate repo index for monorepos
 - Live best-practices research via `--research` flag (fetches Anthropic docs)
-- `/pomc` short alias command
 - Weekly automated sync of best-practices reference from Anthropic documentation
 - Security scan detector (2i): flags accidentally committed secrets, API keys, internal URLs,
   credentials, and PII in CLAUDE.md files with line numbers and safe replacement suggestions.
